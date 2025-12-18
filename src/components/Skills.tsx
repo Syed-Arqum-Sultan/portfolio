@@ -1,8 +1,50 @@
 import { SectionHeading } from './ui/SectionHeading';
-import { motion } from 'framer-motion';
 import { FaReact, FaDatabase, FaServer, FaDocker } from 'react-icons/fa';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Skills = () => {
+    const sectionRef = useRef<HTMLElement>(null);
+    const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+    useEffect(() => {
+        if (!sectionRef.current) return;
+
+        const ctx = gsap.context(() => {
+            cardsRef.current.forEach((card) => {
+                if (!card) return;
+
+                // Staggered reveal with scale and rotation
+                gsap.fromTo(
+                    card,
+                    {
+                        opacity: 0,
+                        scale: 0.5,
+                        rotateY: 90,
+                    },
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        rotateY: 0,
+                        duration: 1,
+                        ease: 'back.out(1.7)',
+                        scrollTrigger: {
+                            trigger: card,
+                            start: 'top 85%',
+                            end: 'top 65%',
+                            scrub: 1,
+                        },
+                    }
+                );
+            });
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
     const skills = [
         {
             category: "Backend & APIs",
@@ -27,18 +69,15 @@ export const Skills = () => {
     ];
 
     return (
-        <section id="skills" className="py-20 bg-slate-950">
+        <section ref={sectionRef} id="skills" className="py-20 bg-slate-950">
             <div className="container mx-auto px-6">
-                <SectionHeading title="Technical Skills" subtitle="My technical toolkit for building robust applications." />
+                <SectionHeading title="The Arsenal" subtitle="Every hero needs the right tools. Here's what I've mastered on my journey." />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" style={{ perspective: '1200px' }}>
                     {skills.map((skill, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            ref={(el) => { cardsRef.current[index] = el; }}
                             className="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-primary/50 transition-all hover:-translate-y-2"
                         >
                             <div className="flex flex-col items-center text-center">
@@ -50,7 +89,7 @@ export const Skills = () => {
                                     ))}
                                 </ul>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

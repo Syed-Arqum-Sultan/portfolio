@@ -14,10 +14,11 @@ export const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'About', to: 'about' },
-        { name: 'Skills', to: 'skills' },
-        { name: 'Projects', to: 'projects' },
-        { name: 'Contact', to: 'contact' },
+        { name: 'The Beginning', to: 'journey' },
+        { name: 'The Arsenal', to: 'skills' },
+        { name: 'The Challenges', to: 'projects' },
+        { name: 'The Impact', to: 'impact' },
+        { name: 'Next Chapter', to: 'contact' },
     ];
 
     return (

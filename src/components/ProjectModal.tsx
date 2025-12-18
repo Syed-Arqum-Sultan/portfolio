@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaFlag, FaRoute, FaTrophy } from 'react-icons/fa';
 
 interface ProjectModalProps {
     isOpen: boolean;
@@ -10,6 +10,9 @@ interface ProjectModalProps {
         fullDescription: string;
         tags: string[];
         image: string;
+        challenge?: string;
+        journey?: string;
+        victory?: string;
         features: string[];
         technologies: string[];
         challenges: string[];
@@ -61,14 +64,40 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-64 object-cover rounded-xl mb-6"
+                                    className="w-full h-64 object-cover rounded-xl mb-8"
                                 />
 
-                                {/* Description */}
-                                <div className="mb-6">
-                                    <h3 className="text-xl font-bold text-slate-200 mb-3">Overview</h3>
-                                    <p className="text-slate-400 leading-relaxed">{project.fullDescription}</p>
-                                </div>
+                                {/* Story Arc */}
+                                {project.challenge && project.journey && project.victory && (
+                                    <div className="mb-8 space-y-6">
+                                        {/* The Challenge */}
+                                        <div className="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                                            <div className="flex items-center gap-3 mb-3">
+                                                <FaFlag className="text-red-400 text-2xl" />
+                                                <h3 className="text-xl font-bold text-slate-200">The Challenge</h3>
+                                            </div>
+                                            <p className="text-slate-400 leading-relaxed">{project.challenge}</p>
+                                        </div>
+
+                                        {/* The Journey */}
+                                        <div className="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                                            <div className="flex items-center gap-3 mb-3">
+                                                <FaRoute className="text-blue-400 text-2xl" />
+                                                <h3 className="text-xl font-bold text-slate-200">The Journey</h3>
+                                            </div>
+                                            <p className="text-slate-400 leading-relaxed">{project.journey}</p>
+                                        </div>
+
+                                        {/* The Victory */}
+                                        <div className="bg-slate-800 p-6 rounded-xl border border-primary/30">
+                                            <div className="flex items-center gap-3 mb-3">
+                                                <FaTrophy className="text-primary text-2xl" />
+                                                <h3 className="text-xl font-bold text-primary">The Victory</h3>
+                                            </div>
+                                            <p className="text-slate-300 leading-relaxed">{project.victory}</p>
+                                        </div>
+                                    </div>
+                                )}
 
                                 {/* Technologies */}
                                 <div className="mb-6">
@@ -98,9 +127,9 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
                                     </ul>
                                 </div>
 
-                                {/* Challenges */}
+                                {/* Technical Challenges */}
                                 <div>
-                                    <h3 className="text-xl font-bold text-slate-200 mb-3">Technical Challenges</h3>
+                                    <h3 className="text-xl font-bold text-slate-200 mb-3">Technical Obstacles Overcome</h3>
                                     <ul className="space-y-2">
                                         {project.challenges.map((challenge, i) => (
                                             <li key={i} className="text-slate-400 flex items-start">

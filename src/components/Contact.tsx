@@ -57,7 +57,7 @@ export const Contact = () => {
     return (
         <section id="contact" className="py-20 bg-slate-950">
             <div className="container mx-auto px-6">
-                <SectionHeading title="Get In Touch" subtitle="Have a project in mind or want to discuss a potential collaboration?" />
+                <SectionHeading title="The Next Chapter" subtitle="Every great story needs a beginning. Let's write yours together." />
 
                 <div className="max-w-2xl mx-auto bg-slate-900 p-8 rounded-2xl border border-slate-800">
                     <form className="space-y-6" onSubmit={handleSubmit}>

@@ -7,3 +7,14 @@
 body {
   @apply bg-slate-900 text-slate-200 font-sans;
 }
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enable 3D transforms */
+body {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
