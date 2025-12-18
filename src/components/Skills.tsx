@@ -1,6 +1,6 @@
 import { SectionHeading } from './ui/SectionHeading';
 import { motion } from 'framer-motion';
-import { FaPython, FaReact, FaDatabase, FaServer, FaDocker } from 'react-icons/fa';
+import { FaReact, FaDatabase, FaServer, FaDocker } from 'react-icons/fa';
 
 export const Skills = () => {
     const skills = [
