@@ -23,7 +23,7 @@ export const Contact = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // User needs to replace this
+                    access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
                     name: formData.name,
                     email: formData.email,
                     message: formData.message,
