@@ -65,32 +65,32 @@ export const Journey = () => {
 
     const milestones = [
         {
-            year: "2021",
-            title: "The Discovery",
-            icon: <FaLightbulb className="text-3xl" />,
-            description: "Started my journey into web development, fascinated by how code could solve real-world problems. Dove deep into Python and Django, building my first applications.",
-            achievement: "Built first full-stack application"
-        },
-        {
-            year: "2022",
-            title: "The First Challenge",
-            icon: <FaCode className="text-3xl" />,
-            description: "Joined a team working on complex SaaS platforms. Faced my first major challenge: optimizing slow APIs and building scalable booking systems. This is where I learned that great code isn't just about working—it's about working efficiently.",
-            achievement: "Reduced API response time by 60%"
-        },
-        {
-            year: "2023",
-            title: "The Growth",
+            year: "2023 - Present",
+            title: "Ezhire - Software Engineer",
             icon: <FaRocket className="text-3xl" />,
-            description: "Expanded my expertise to frontend technologies, mastering Angular and React. Started building complete user experiences, from database to UI. Implemented real-time features, map integrations, and complex workflows.",
-            achievement: "Delivered 10+ production features"
+            description: "Designed and maintained scalable backend systems for a high-traffic car rental platform. Built RESTful APIs using Django REST Framework and FastAPI, improving performance by 40%. Developed AI-powered chatbots and voice recognition workflows.",
+            achievement: "Improved API performance by 40%"
         },
         {
-            year: "2024",
-            title: "The Mastery",
+            year: "2021 - 2023",
+            title: "Dusky Solution - Software Engineer",
+            icon: <FaCode className="text-3xl" />,
+            description: "Designed and developed full-stack web applications using modern frameworks and best practices. Built and maintained RESTful APIs to support frontend and mobile clients, collaborating with cross-functional teams to deliver end-to-end solutions.",
+            achievement: "Full-stack end-to-end delivery"
+        },
+        {
+            year: "2021",
+            title: "Contour Software - Trainee MERN Stack",
+            icon: <FaLightbulb className="text-3xl" />,
+            description: "Developed full-stack applications using the MERN stack. Built secure REST APIs using Node.js and Express.js, and implemented authentication and authorization mechanisms following security best practices.",
+            achievement: "MERN Stack Development"
+        },
+        {
+            year: "2018 - 2022",
+            title: "Mohammad Ali Jinnah University",
             icon: <FaTrophy className="text-3xl" />,
-            description: "Now a full-stack developer with 3+ years of experience, I've built scalable systems handling 100K+ users, optimized critical infrastructure, and mentored junior developers. Every project is a new story waiting to be written.",
-            achievement: "Full-stack expertise achieved"
+            description: "Completed Bachelor of Science in Software Engineering, building a strong academic foundation in software design, algorithms, and system architecture.",
+            achievement: "BS Software Engineering"
         }
     ];
 

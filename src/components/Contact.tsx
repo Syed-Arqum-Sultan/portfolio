@@ -126,8 +126,11 @@ export const Contact = () => {
 
                     <div className="mt-6 pt-6 border-t border-slate-800 text-center">
                         <p className="text-slate-400 text-sm mb-2">Or reach me directly at:</p>
-                        <a href="mailto:syedarqum1999@gmail.com" className="text-primary hover:underline">
+                        <a href="mailto:syedarqum1999@gmail.com" className="text-primary hover:underline block">
                             syedarqum1999@gmail.com
+                        </a>
+                        <a href="tel:+923408727667" className="text-slate-400 hover:text-primary transition-colors block mt-2">
+                            +92 340 8727667
                         </a>
                     </div>
                 </div>

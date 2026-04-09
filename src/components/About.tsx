@@ -17,10 +17,10 @@ export const About = () => {
                         className="flex-1 text-slate-300 leading-relaxed text-lg"
                     >
                         <p className="mb-6">
-                            I have over 3 years of experience designing scalable backend systems and full-stack applications. My work involves building complex booking flows, optimizing slow APIs, implementing map-based real-time features, improving UI/UX, and developing clean, modular frontend components.
+                            Software Engineer with 4.5+ years of experience building scalable backend systems, AI-enabled applications, and full-stack platforms. Specialized in Django, FastAPI, and cloud-based architectures with strong expertise in performance optimization and high-availability production systems.
                         </p>
                         <p>
-                            I’ve also implemented secure OTP flows, enhanced DB performance, and contributed to production SaaS systems with efficient, maintainable code. My technical foundation is built on Python (Django) and JavaScript (Angular/React), allowing me to bridge the gap between robust backends and dynamic frontends.
+                            Experienced in developing AI-driven solutions including chatbots, voice recognition integrations, and automation workflows. Proven ability to design robust APIs, implement asynchronous processing pipelines, and collaborate with cross-functional teams to deliver reliable software solutions.
                         </p>
                     </motion.div>
 
@@ -33,7 +33,7 @@ export const About = () => {
                         className="flex-1 grid grid-cols-2 gap-6"
                     >
                         <div className="bg-slate-800 p-6 rounded-xl text-center border border-slate-700 hover:border-primary/50 transition-colors">
-                            <h3 className="text-4xl font-bold text-primary mb-2">3+</h3>
+                            <h3 className="text-4xl font-bold text-primary mb-2">4.5+</h3>
                             <p className="text-slate-400">Years Experience</p>
                         </div>
                         <div className="bg-slate-800 p-6 rounded-xl text-center border border-slate-700 hover:border-primary/50 transition-colors">

@@ -49,77 +49,50 @@ export const Projects = () => {
 
     const projects = [
         {
-            title: "The Quest for Seamless Bookings",
-            description: "A complex multi-step journey where users needed to book cars effortlessly. The challenge? Slow APIs, complex location selection, and security concerns.",
-            fullDescription: "The Challenge: Users were abandoning bookings due to slow performance and confusing workflows. The Journey: I architected a complete solution with optimized database queries, real-time Google Maps integration, and secure OTP verification. The Victory: A lightning-fast booking system that handles thousands of users daily.",
-            tags: ["Angular", "Django", "Google Maps", "Redis"],
+            title: "Car Rental Platform",
+            description: "Built a peer-to-peer car rental system with real-time availability and booking conflict prevention. Designed dynamic pricing and vendor-based booking workflows.",
+            fullDescription: "The Challenge: Building a scalable peer-to-peer car rental platform requiring real-time availability checks, dynamic pricing, and secure vendor flows. The Journey: I architected a complete solution with dynamic pricing, conflict prevention, and OTP-based authentication. The Victory: A robust, high-availability platform successfully managing complex bookings seamlessly.",
+            tags: ["Django", "Firebase", "Mandrill", "FastAPI"],
             image: "/car-rental.png",
-            challenge: "Users faced slow booking processes, confusing multi-step flows, and security vulnerabilities in the car rental system.",
-            journey: "Redesigned the entire booking architecture from the ground up. Implemented database indexing and query optimization, reducing API response time by 60%. Built an intuitive multi-step wizard with real-time Google Maps integration featuring custom polygons for service areas. Added secure OTP verification using Firebase for both email and SMS.",
-            victory: "Delivered a blazing-fast booking system with 60% faster APIs, seamless map-based location selection, and bank-grade security. User completion rates increased significantly.",
+            challenge: "Implementing real-time availability and preventing booking conflicts while handling dynamic pricing for vendors.",
+            journey: "Architected a peer-to-peer car rental system from the ground up. Integrated Firebase for secure OTP authentication and automated email workflows via Mandrill. Designed dynamic pricing logic and extensive vendor-based booking workflows.",
+            victory: "Successfully delivered a fast and secure car rental system that perfectly handles peer-to-peer vendor flows and dynamic pricing models.",
             features: [
-                "Multi-step booking wizard with progress tracking",
-                "Real-time Google Maps integration with custom markers and polygons",
-                "Email and SMS OTP verification using Firebase",
-                "Database query optimization with indexing and stored procedures",
-                "Reusable Angular components for consistent UI",
-                "Redis caching for improved performance"
+                "Real-time availability and conflict prevention",
+                "Dynamic pricing and vendor-based logic",
+                "OTP authentication using Firebase",
+                "Automated email workflows via Mandrill",
+                "Peer-to-peer booking workflows"
             ],
-            technologies: ["Angular", "TypeScript", "Django", "Django REST Framework", "PostgreSQL", "Redis", "Google Maps API", "Firebase"],
+            technologies: ["Django", "FastAPI", "Firebase", "Mandrill", "Python", "Redis", "PostgreSQL"],
             challenges: [
-                "Optimized slow API endpoints by implementing database indexing and query refactoring, reducing response time by 60%",
-                "Designed complex polygon-based location selection on Google Maps with real-time updates",
-                "Implemented secure OTP flow with rate limiting and expiration handling"
+                "Designed complex vendor-based dynamic pricing models",
+                "Prevented real-time booking conflicts by optimizing database transactions",
+                "Integrated secure Firebase OTP flows and Mandrill email delivery"
             ],
             link: "#"
         },
         {
-            title: "The Security Fortress",
-            description: "Building an impenetrable authentication system that's both secure and user-friendly. The mission? Unified OTP verification across email and SMS.",
-            fullDescription: "The Challenge: Users needed a secure yet seamless way to verify their identity across multiple channels. The Journey: I built a robust dual-channel OTP system with Firebase integration, custom email services, and dynamic document validation. The Victory: A security system that's both bulletproof and delightful to use.",
-            tags: ["Python", "Firebase", "Security", "API"],
-            image: "/otp-verification.png",
-            challenge: "The platform needed a secure, reliable authentication system supporting both email and SMS verification with document upload capabilities.",
-            journey: "Architected a unified verification flow leveraging Firebase for SMS delivery and a custom email service for email OTPs. Implemented rate limiting, expiration handling, and retry logic to prevent abuse. Built dynamic document validation with file type and size restrictions. Created reusable UI components for a consistent verification experience.",
-            victory: "Shipped a production-ready authentication system handling thousands of verifications daily with zero security incidents. Users can verify via their preferred channel seamlessly.",
-            features: [
-                "Dual-channel OTP delivery (Email + SMS)",
-                "Firebase integration for secure SMS delivery",
-                "Custom email service with templating",
-                "Dynamic document upload with validation",
-                "Reusable OTP input components",
-                "Rate limiting and security measures"
-            ],
-            technologies: ["Python", "Django", "Firebase Admin SDK", "Celery", "Redis", "React", "TypeScript"],
-            challenges: [
-                "Implemented unified verification flow supporting both email and SMS with fallback mechanisms",
-                "Designed secure OTP generation and validation with expiration and retry logic",
-                "Built dynamic document validation system with file type and size restrictions"
-            ],
-            link: "#"
-        },
-        {
-            title: "The Automation Engine",
-            description: "Scaling marketing campaigns to reach 100K+ users without breaking a sweat. The challenge? Automated promo codes, user segmentation, and scheduled tasks.",
-            fullDescription: "The Challenge: Marketing teams needed to run massive promotional campaigns targeting specific user segments at scale. The Journey: I built an enterprise-grade automation platform with Celery for distributed task processing, flexible user segmentation, and automated promo code generation. The Victory: A system that processes 100K+ users per campaign reliably and efficiently.",
-            tags: ["Django", "Celery", "Automation", "Batch Processing"],
+            title: "Real-Time Notification System",
+            description: "Built an event-driven notification system processing thousands of events per minute. Implemented Redis Pub/Sub and WebSockets for real-time updates.",
+            fullDescription: "The Challenge: Creating an event-driven notification architecture capable of processing thousands of events per minute without bottlenecks. The Journey: I utilized Redis Pub/Sub and WebSockets for instantaneous real-time updates and built fault-tolerant pipelines. The Victory: A highly scalable, fault-tolerant system reliably delivering critical notifications globally.",
+            tags: ["Redis", "WebSockets", "AWS SES", "Twilio"],
             image: "/automation.png",
-            challenge: "Marketing teams struggled to run large-scale promotional campaigns efficiently. Manual processes were slow, error-prone, and couldn't handle the scale needed.",
-            journey: "Designed a scalable automation pipeline using Django and Celery with RabbitMQ for reliable distributed task execution. Built a flexible user segmentation engine with complex filtering logic. Implemented automated promo code generation with customizable patterns. Added real-time monitoring dashboards and email notifications for campaign results.",
-            victory: "Delivered an automation powerhouse processing 100K+ users per campaign with real-time progress tracking. Marketing teams can now launch campaigns in minutes instead of days.",
+            challenge: "Processing thousands of events per minute and guaranteeing message delivery across SMS and Email without delays.",
+            journey: "Designed an event-driven notification system processing high-throughput events. Leveraged Redis Pub/Sub combined with WebSockets for real-time frontend updates. Built fault-tolerant, scalable pipelines incorporating Twilio for SMS and AWS SES for email delivery.",
+            victory: "Deployed a highly resilient notification engine that gracefully processes massive event loads and powers real-time user experiences.",
             features: [
-                "Automated promo code generation with customizable patterns",
-                "User segmentation based on multiple criteria",
-                "Scheduled task execution with cron-like syntax",
-                "Batch processing with progress tracking",
-                "Real-time monitoring dashboard",
-                "Email notification system for campaign results"
+                "Event-driven architecture for thousands of events/min",
+                "Real-time updates via WebSockets",
+                "Redis Pub/Sub integration",
+                "Fault-tolerant SMS via Twilio",
+                "High-volume email via AWS SES"
             ],
-            technologies: ["Django", "Celery", "RabbitMQ", "PostgreSQL", "Redis", "Django Management Commands"],
+            technologies: ["Redis", "WebSockets", "AWS SES", "Twilio", "Python", "Celery", "RabbitMQ"],
             challenges: [
-                "Designed scalable batch-processing pipeline handling 100K+ users per campaign",
-                "Implemented distributed task queue with Celery and RabbitMQ for reliable execution",
-                "Built flexible user segmentation engine with complex filtering logic"
+                "Scaling the event-driven system to process massive concurrent loads",
+                "Guaranteeing zero message loss using fault-tolerant patterns",
+                "Synchronizing real-time events to frontends through WebSockets"
             ],
             link: "#"
         }
@@ -131,7 +104,7 @@ export const Projects = () => {
                 <div className="container mx-auto px-6">
                     <SectionHeading title="The Challenges" subtitle="Every great developer faces epic quests. Here are mine—and how I conquered them." />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ perspective: '1000px' }}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto" style={{ perspective: '1000px' }}>
                         {projects.map((project, index) => (
                             <div
                                 key={index}

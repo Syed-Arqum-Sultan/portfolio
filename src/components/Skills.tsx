@@ -47,24 +47,24 @@ export const Skills = () => {
 
     const skills = [
         {
-            category: "Backend & APIs",
+            category: "Backend Frameworks",
             icon: <FaServer className="text-4xl text-primary mb-4" />,
-            items: ["Python", "Django", "FastAPI", "REST APIs", "WebSockets", "Microservices"]
+            items: ["Python", "Django & DRF", "FastAPI", "Node.js", "Express.js", "Celery", "SQLAlchemy"]
         },
         {
-            category: "Frontend",
+            category: "Frontend & UI",
             icon: <FaReact className="text-4xl text-blue-400 mb-4" />,
-            items: ["React", "Angular", "TypeScript", "JavaScript", "TailwindCSS", "Framer Motion"]
+            items: ["React.js", "AngularJS", "JavaScript", "HTML5", "CSS3", "TailwindCSS"]
         },
         {
-            category: "Databases",
+            category: "Databases & Storage",
             icon: <FaDatabase className="text-4xl text-green-400 mb-4" />,
-            items: ["PostgreSQL", "MySQL", "Redis", "Celery", "RabbitMQ"]
+            items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Firebase", "AWS S3"]
         },
         {
-            category: "DevOps & Cloud",
+            category: "Cloud & AI",
             icon: <FaDocker className="text-4xl text-blue-500 mb-4" />,
-            items: ["Docker", "Nginx", "AWS", "Azure", "GCP", "CI/CD"]
+            items: ["AWS & Docker", "CI/CD & Nginx", "Chatbot Dev", "Voice Rec Integration", "Pub/Sub & WebSockets"]
         }
     ];
 

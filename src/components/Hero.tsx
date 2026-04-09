@@ -85,8 +85,8 @@ export const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="text-xl md:text-2xl text-slate-400 mb-10 max-w-2xl mx-auto"
                 >
-                    Full-stack developer turning complex challenges into elegant solutions.
-                    From slow APIs to scalable systems handling 100K+ users—here's my story.
+                    Software Engineer turning complex challenges into elegant solutions.
+                    From scalable backend systems to AI-enabled applications—here's my story.
                 </motion.p>
 
                 <motion.div

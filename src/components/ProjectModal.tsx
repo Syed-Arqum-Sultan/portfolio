@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
+// import { useEffect, useRef } from 'react';
 import { FaTimes, FaFlag, FaRoute, FaTrophy } from 'react-icons/fa';
 
 interface ProjectModalProps {
